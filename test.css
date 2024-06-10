@@ -1,0 +1,9 @@
+.container{
+width: 250px;
+height: 250px;
+background-color: teal;
+padding: 10px;
+}
+body{
+    background: wheat;
+}
