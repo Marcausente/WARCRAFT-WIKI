@@ -189,6 +189,16 @@ footer {
 
 }
 
+.oneimage {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    margin: auto; /* Centra horizontalmente */
+    margin-top: 50px;
+    border-radius: 15px;
+    width: 900px;
+    height: 450px;
+}
+
 @media screen and (max-width: 700px) {
     .index {
         padding: 50px;
@@ -230,6 +240,10 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .image-container {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
     }
 }
 
