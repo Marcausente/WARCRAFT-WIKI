@@ -10,8 +10,6 @@ body {
 #container {
     margin: auto;
     border: 1px solid rgb(150, 110, 51); /* Añade un borde de 1px alrededor de todo el container */
-    /* width: calc(100% - 20px); Quita 20 pixeles equitativos entre izquierda y derecha en la pagina */
-    margin: auto;
 }
 
 nav .logo {
@@ -164,19 +162,31 @@ footer {
 .titlearticle{
     color: white !important
 }
-@keyframes rotar { /* Creamos la animación de las opciones del menú */
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    33% {
-        transform: rotate(15deg) scale(1);
-    }
-    66% {
-        transform: rotate(-15deg) scale(1);
-    }
-    100% {
-        transform: rotate(0deg) scale(1);
-    }
+.article {
+    margin-bottom: 40px; /* Separar los artículos entre sí */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
+}
+
+.normalimage{
+    margin-right: 20px; /* Añade un margen entre la imagen y el video */
+    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
+    margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
+}
+.image-container {
+    display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
+    justify-content: center;
+}
+
+.roadmap {
+    margin-right: 20px; /* Añade un margen entre la imagen y el video */
+    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
+
 }
 
 @media screen and (max-width: 700px) {
@@ -203,6 +213,22 @@ footer {
     .enlace-index {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .content-wrapper {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en la columna */
+    }
+    .roadmap {
+        margin-right: 0; /* Reinicia el margen en pantallas pequeñas */
+        margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
+    }
+    .video-wrapper{
+        width: 100%; /* Ajusta este valor según sea necesario */
+        max-width: 600px; /* Limita el tamaño máximo */
+        margin: 0 auto; /* Centra el elemento */
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
 }
@@ -245,54 +271,30 @@ footer {
         justify-content: center;
         align-items: center;
     }
-
     .image-container {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
     }
-    
-}
-.article {
-    margin-bottom: 40px; /* Separar los artículos entre sí */
 }
 
-.content-wrapper {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
-}
-
-.normalimage{
-    margin-right: 20px; /* Añade un margen entre la imagen y el video */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
-    margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
-}
-.image-container {
-    display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
-    justify-content: center;
-}
-
-.roadmap {
-    margin-right: 20px; /* Añade un margen entre la imagen y el video */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
-
-}
-
-@media screen and (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos en la columna */
-    }
-    .roadmap {
-        margin-right: 0; /* Reinicia el margen en pantallas pequeñas */
-        margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
-    }
-}
 @keyframes agrandar { /*Animacion sencilla de crecimiento de imagen*/
     30% {
         transform: scale(0.90);
     }
     65% {
         transform: scale(0.85) inherit;
+    }
+}
+@keyframes rotar { /* Creamos la animación de las opciones del menú */
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    33% {
+        transform: rotate(15deg) scale(1);
+    }
+    66% {
+        transform: rotate(-15deg) scale(1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
     }
 }
