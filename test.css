@@ -3,6 +3,10 @@ width: 250px;
 height: 250px;
 background-color: teal;
 padding: 10px;
+text-align: center;
+justify-content: ce;
+padding: 100px 60px 100px 60px; /*Para el texto, arriba derecha abajo izquierda*/
+border: 10px solid red;
 }
 body{
     background: wheat;

@@ -279,7 +279,7 @@ footer {
     }
     .video-wrapper{
         width: 100%; /* Ajusta este valor según sea necesario */
-        max-width: 300px; /* Limita el tamaño máximo */
+
         margin: 0 auto; /* Centra el elemento */
         display: flex;
         justify-content: center;
