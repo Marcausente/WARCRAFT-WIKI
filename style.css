@@ -211,7 +211,7 @@ footer {
     height: 400px; /*Pongo esto porque se veian muy pequeñitas en comparación a la imagen*/
     max-height: 800px;
     max-width: 1300px;
-    margin-bottom: 80px;
+    margin-bottom:  10px;
 
   }
   .continent{
@@ -267,7 +267,7 @@ footer {
 
 @media screen and (max-width: 1100px) {
     .continet-list {
-        margin-bottom: 250px;
+        margin-bottom: 140px;
     }
 }
 @media screen and (max-width: 700px) {
@@ -317,7 +317,7 @@ footer {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
     }
     .continet-list {
-        margin-bottom: 600px;
+        margin-bottom: 380px;
     }
 }
 
