@@ -4,20 +4,20 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-image: url(https://assets.worldofwarcraft.blizzard.com/static/components/Pane/Pane-dirtLight.18def74ed60ab9f1f4139f87349d2f79.jpg);
-    color: #F2E4C9; /* Cambia el color de las letras a blanco */
+    color: #F2E4C9; 
 }
 
 #container {
     margin: auto;
-    border: 1px solid rgb(150, 110, 51); /* Añade un borde de 1px alrededor de todo el container */
+    border: 1px solid rgb(150, 110, 51); 
 }
 
 nav .logo {
     position: absolute;
-    left: 16px; /* Ajusta la distancia desde la izquierda */
+    left: 16px; 
 }
 
-.logo:hover { /* Aplicamos la animación al menú */
+.logo:hover { 
     cursor: pointer;
 }
 
@@ -32,27 +32,30 @@ header {
 }
 
 nav {
+    position: fixed;
+    width: 100%;
     background-color: rgb(223, 158, 58);
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: right;
     padding: 10px;
+    z-index: 1000;
 }
 
 
 nav ul {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap;
+    justify-content: center; 
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 nav ul li {
-    flex: 1 1 auto; /* Permite que los elementos se ajusten automáticamente */
-    margin: 5px; /* Agrega margen entre los elementos */
+    flex: 1 1 auto;
+    margin: 5px; 
 }
 
 nav ul li a {
@@ -64,7 +67,7 @@ nav ul li a {
 }
 
 
-nav ul li a:hover { /* Al pasar el ratón por encima */
+nav ul li a:hover { 
     background-color: #575757;
 }
 
@@ -78,9 +81,11 @@ nav ul li a:active{
 .img-header-quest {
     width: 100%;
     margin-bottom: -45px;
+    margin-top: 50px
 }
-.img-header2 {
-    width: 20%;
+
+.img-header{
+    margin-top: 50px;
 }
 
 #content {
@@ -142,53 +147,53 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Quitar el subrayado del enlace */
-    color: inherit; /* Heredar el color del texto */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .img-index {
     display: block;
     margin: auto;
-    width: 150px; /* Ajusta el ancho según sea necesario */
-    height: 150px; /* Ajusta la altura según sea necesario */
-    object-fit: contain; /* Ajusta la imagen para que quepa dentro del contenedor sin recortarse */
+    width: 150px;
+    height: 150px; 
+    object-fit: contain; 
 }
 
 .h1-index {
     font-weight: bolder;
-    font-size: x-large;  /* Cambia el color del texto a negro */
-    margin-top: 1rem; /* Añade espacio entre la imagen y el texto */
+    font-size: x-large;  
+    margin-top: 1rem; 
 }
-.img-index:hover { /* Aplicamos la animación al menú */
+.img-index:hover {
     animation: rotar 1s;
 }
 .titlearticle{
     color: white !important
 }
 .article {
-    margin-bottom: 40px; /* Separar los artículos entre sí */
+    margin-bottom: 40px; 
 }
 
 .content-wrapper {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
+    justify-content: center;
+    align-items: flex-start; 
+    border-radius: 15px; 
 }
 
 .normalimage{
-    margin-right: 20px; /* Añade un margen entre la imagen y el video */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
-    margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
+    margin-right: 20px;
+    border-radius: 15px; 
+    margin-bottom: 20px; 
 }
 .image-container {
-    display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
+    display: flex; 
     justify-content: center;
 }
 
 .roadmap {
-    margin-right: 20px; /* Añade un margen entre la imagen y el video */
-    border-radius: 15px; /* Ajusta este valor según el grado de redondeo que desees */
+    margin-right: 20px; 
+    border-radius: 15px; 
 
 }
 
@@ -205,30 +210,42 @@ footer {
 .continet-list {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Posiciona las columnas y establece su medida */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 2em;
     width: 100%;
-    height: 400px; /*Pongo esto porque se veian muy pequeñitas en comparación a la imagen*/
+    height: 400px; 
     max-height: 800px;
     max-width: 1300px;
-    margin-bottom:  10px;
+    margin-bottom:  175px;
 
   }
   .continent{
-    background-color: #f9f9f9;
-    padding: 1em;
+    background-color: rgb(150, 110, 51);
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 8px; /*Redondea el borde*/
     text-align: center;
-    display: flex; /* Hace que flexbox funcione */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;   
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-    background-position: center; /* Centra la imagen de fondo */
-    height: 100px; /* Ajusta la altura según tus necesidades */  
-    background-size: 100%;  
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 160px;   
+    background-size: 100%;      
   }
+
+  .continent:hover{
+      color: rgb(180, 166, 141);
+      transform: scale(1.08);
+      transition: transform 0.3s ease;
+  }
+  .continent:active{
+    opacity: 0.8;
+    filter: saturate(1);
+    filter: brightness(1.2);
+    animation: agrandar 0.3s;
+  }
+  
   .continent h2 {
     font-size: 1.5em;
     margin: 0.5em 0;
@@ -240,16 +257,6 @@ footer {
     width: 100%; /* Asegura que el contenedor padre ocupe todo el ancho disponible */
   }
   
-  #kalimdor{
-    background-image: url(img/WorldMap-Kalimdor.webp);
-    background-position-y: -30px;
-  }
-  #reinos{
-    background-image: url(img/869563.jpg);
-  }
-  #khazalgar{
-    background-image: url(img/khaz.webp);
-  }
   #special{
     bottom: -20; /* Lo coloca en la parte inferior de la ventana del navegador */
     left: 0; /* Alinea el elemento a la izquierda */
@@ -267,7 +274,7 @@ footer {
 
 @media screen and (max-width: 1100px) {
     .continet-list {
-        margin-bottom: 140px;
+        margin-bottom: 340px;
     }
 }
 @media screen and (max-width: 700px) {
@@ -305,28 +312,28 @@ footer {
         margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
     }
     .video-wrapper{
-        width: 100%; /* Ajusta este valor según sea necesario */
-        max-width: 600px; /* Limita el tamaño máximo */
-        margin: 0 auto; /* Centra el elemento */
+        width: 100%; 
+        max-width: 600px; 
+        margin: 0 auto; 
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .image-container {
-        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        flex-direction: column; 
     }
     .continet-list {
-        margin-bottom: 380px;
+        margin-bottom: 400%;
     }
 }
 
-@media screen and (max-width: 500px) { /* Todo lo que hay dentro del media screen se aplica solo cuando la página tiene un ancho de 500 píxeles o menos */
+@media screen and (max-width: 500px) { 
     .index {
         padding: 50px;
         flex-direction: column;
     }
-    .img-index { /* Usando el clip path, se le da la forma redondeada a las opciones del menú */
+    .img-index { 
         width: 10rem;
         margin: auto;
         clip-path: circle(50%);
@@ -352,19 +359,21 @@ footer {
         width: 900px !important;
     }
     .video-wrapper{
-        width: 100%; /* Ajusta este valor según sea necesario */
-
-        margin: 0 auto; /* Centra el elemento */
+        width: 100%; 
+        margin: 0 auto; 
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .image-container {
-        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        flex-direction: column; 
+    }
+    .continet-list {
+        margin-bottom: 430%;
     }
 }
 
-@keyframes agrandar { /*Animacion sencilla de crecimiento de imagen*/
+@keyframes agrandar { 
     30% {
         transform: scale(0.90);
     }
@@ -372,7 +381,7 @@ footer {
         transform: scale(0.85) inherit;
     }
 }
-@keyframes rotar { /* Creamos la animación de las opciones del menú */
+@keyframes rotar { 
     0% {
         transform: rotate(0deg) scale(1);
     }
@@ -385,4 +394,56 @@ footer {
     100% {
         transform: rotate(0deg) scale(1);
     }
+}
+
+ /*Targets de todo*/
+#kalimdor{
+    background-image: url(img/WorldMap-Kalimdor.webp);
+  }
+  #reinos{
+    background-image: url(img/869563.jpg);
+  }
+  #khazalgar{
+    background-image: url(img/khaz.webp);
+  }
+  #terrallende{
+    background-image: url(img/WorldMap-Expansion01.webp);
+  }
+  #rasganorte{
+    background-image: url(img/rasga.jpeg);
+  }
+  #pandaria{
+    background-image: url(img/Pandaria.webp);
+  }
+  #draenor{
+    background-image: url(img/Draenor_WoD.webp);
+  }
+  #kultiras{
+    background-image: url(img/WorldMap-KulTirasES.webp);
+  }
+  #zandalar{
+    background-image: url(img/WorldMap-Zandalar.webp);
+  }
+  #abruptas{
+    background-image: url(img/WorldMap-BrokenIsles.webp);
+  }
+  #shadowlands{
+    background-image: url(img/TheShadowlands.jpg);
+  }
+  #dragon{
+    background-image: url(img/dragon.jpeg);
+  }
+  
+::-webkit-scrollbar-track {
+    background: #3d3535; /* Color de fondo del riel */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6d1c1c; /* Color del pulgar al hacer hover */
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(148, 98, 23); /* Color del pulgar */
+}
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
 }
