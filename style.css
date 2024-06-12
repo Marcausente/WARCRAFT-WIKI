@@ -202,6 +202,67 @@ footer {
     height: 450px;
 }
 
+.continet-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Posiciona las columnas y establece su medida */
+    gap: 2em;
+    width: 100%;
+    height: 400px; /*Pongo esto porque se veian muy pequeñitas en comparación a la imagen*/
+    max-height: 800px;
+    max-width: 1300px;
+    margin-bottom: 80px;
+
+  }
+  .continent{
+    background-color: #f9f9f9;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    display: flex; /* Hace que flexbox funcione */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 100px; /* Ajusta la altura según tus necesidades */  
+    background-size: 100%;  
+  }
+  .continent h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    width: 100%; /* Asegura que el contenedor padre ocupe todo el ancho disponible */
+  }
+  
+  #kalimdor{
+    background-image: url(img/WorldMap-Kalimdor.webp);
+    background-position-y: -30px;
+  }
+  #reinos{
+    background-image: url(img/869563.jpg);
+  }
+  #khazalgar{
+    background-image: url(img/khaz.webp);
+  }
+  #special{
+    bottom: -20; /* Lo coloca en la parte inferior de la ventana del navegador */
+    left: 0; /* Alinea el elemento a la izquierda */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+
+@media screen and (max-width: 1100px) {
+    .continet-list {
+        margin-bottom: 250px;
+    }
+}
 @media screen and (max-width: 700px) {
     .index {
         padding: 50px;
@@ -247,6 +308,9 @@ footer {
 
     .image-container {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    }
+    .continet-list {
+        margin-bottom: 600px;
     }
 }
 
