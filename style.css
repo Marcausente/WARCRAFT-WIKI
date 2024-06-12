@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;   
+    background-color: rgb(36,28,24);   
      background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -29,7 +29,6 @@ header {
     font-size: 30px;
     text-align: center;
     line-height: 100px;
-    border-bottom: 3px solid black;
 }
 
 nav {
@@ -76,8 +75,12 @@ nav ul li a:active{
     animation: agrandar 0.3s;
 }
 
-.img-header {
+.img-header-quest {
     width: 100%;
+    margin-bottom: -45px;
+}
+.img-header2 {
+    width: 20%;
 }
 
 #content {
