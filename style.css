@@ -1,6 +1,6 @@
 body {
     background-color: rgb(36,28,24);   
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-image: url(https://assets.worldofwarcraft.blizzard.com/static/components/Pane/Pane-dirtLight.18def74ed60ab9f1f4139f87349d2f79.jpg);
@@ -10,6 +10,10 @@ body {
 #container {
     margin: auto;
     border: 1px solid rgb(150, 110, 51); 
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Añadido para centrar el contenido horizontalmente */
 }
 
 nav .logo {
@@ -43,7 +47,6 @@ nav {
     z-index: 1000;
 }
 
-
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -66,12 +69,11 @@ nav ul li a {
     padding: 10px;
 }
 
-
 nav ul li a:hover { 
     background-color: #575757;
 }
 
-nav ul li a:active{
+nav ul li a:active {
     opacity: 0.8;
     filter: saturate(1);
     filter: brightness(1.2);
@@ -84,23 +86,23 @@ nav ul li a:active{
     margin-top: 50px
 }
 
-.img-header{
+.img-header {
     margin-top: 50px;
 }
 
 #content {
     margin-top: -60px;
-    padding: 50px; /* Puedes ajustar el valor según sea necesario */
+    padding: 50px;
 }
 
 .article {
-    margin-bottom: 40px; /* Separar los artículos entre sí */
-    text-align: justify; /* Justificar el texto dentro de los artículos */
+    margin-bottom: 40px; 
+    text-align: justify;
 }
 
 footer {
     text-align: center;
-    padding-bottom: 20px; /* Añade espacio al final de la página */
+    padding-bottom: 20px;
 }
 
 .titlearticle {
@@ -113,7 +115,7 @@ footer {
     align-items: center;
     margin: 1rem;
     text-align: center;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea */
+    flex-wrap: wrap;
 }
 
 .footer-index {
@@ -136,195 +138,268 @@ footer {
 .opcion-menu:hover {
     cursor: pointer;
 }
-.opcion-menu:active{
-        opacity: 0.8;
-        filter: saturate(1);
-        filter: brightness(1.2);
-        animation: agrandar 0.3s;
+
+.opcion-menu:active {
+    opacity: 0.8;
+    filter: saturate(1);
+    filter: brightness(1.2);
+    animation: agrandar 0.3s;
 }
 
 .enlace-index {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; 
-    color: inherit; 
+    text-decoration: none;
+    color: inherit;
 }
 
 .img-index {
     display: block;
     margin: auto;
     width: 150px;
-    height: 150px; 
-    object-fit: contain; 
+    height: 150px;
+    object-fit: contain;
 }
 
 .h1-index {
     font-weight: bolder;
     font-size: x-large;  
-    margin-top: 1rem; 
+    margin-top: 1rem;
 }
+
 .img-index:hover {
     animation: rotar 1s;
 }
-.titlearticle{
-    color: white !important
+
+.titlearticle {
+    color: white !important;
 }
+
 .article {
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .content-wrapper {
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
-    border-radius: 15px; 
+    align-items: flex-start;
+    border-radius: 15px;
 }
 
-.normalimage{
+.normalimage {
     margin-right: 20px;
-    border-radius: 15px; 
-    margin-bottom: 20px; 
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
+
 .image-container {
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
 .roadmap {
-    margin-right: 20px; 
-    border-radius: 15px; 
-
+    margin-right: 20px;
+    border-radius: 15px;
 }
 
 .oneimage {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    margin: auto; /* Centra horizontalmente */
+    align-items: center;
+    margin: auto;
     margin-top: 50px;
     border-radius: 15px;
     width: 900px;
     height: 450px;
 }
-
 .continet-list {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 2em;
     width: 100%;
-    height: 400px; 
-    max-height: 800px;
     max-width: 1300px;
-    margin-bottom:  175px;
+    margin-bottom: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center; /* Añadido para centrar horizontalmente */
+    align-content: center; /* Añadido para centrar verticalmente */
+}
 
-  }
-  .continent{
+.continent {
     background-color: rgb(150, 110, 51);
     border: 1px solid #ddd;
-    border-radius: 8px; /*Redondea el borde*/
+    border-radius: 8px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;   
-    background-repeat: no-repeat; 
-    background-position: center; 
-    height: 160px;   
-    background-size: 100%;      
-  }
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160px;
+    background-size: 100%;
+    transition: transform 0.3s ease;
+}
+.expansion{
+    background-color: rgb(150, 110, 51);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160px;
+    background-size: 100%;
+    transition: transform 0.3s ease;
+    width: calc(25% - 1em); /* Ajusta el ancho deseado según el número de columnas */
+    margin-bottom: 2em; /* Espacio inferior entre elementos */
 
-  .continent:hover{
-      color: rgb(180, 166, 141);
-      transform: scale(1.08);
-      transition: transform 0.3s ease;
-  }
-  .continent:active{
+}
+.expansionlist{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    max-width: 1300px;
+    margin-bottom: px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.expansion:hover{
+    color: rgb(180, 166, 141);
+    transform: scale(1.08);
+}
+.expansion:active{
     opacity: 0.8;
     filter: saturate(1);
     filter: brightness(1.2);
     animation: agrandar 0.3s;
-  }
-  
-  .continent h2 {
+}
+.continent:hover {
+    color: rgb(180, 166, 141);
+    transform: scale(1.08);
+}
+
+.continent:active {
+    opacity: 0.8;
+    filter: saturate(1);
+    filter: brightness(1.2);
+    animation: agrandar 0.3s;
+}
+
+.continent h2 {
     font-size: 1.5em;
     margin: 0.5em 0;
-  }
+}
 
-  .contenedor {
+.contenedor {
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    width: 100%; /* Asegura que el contenedor padre ocupe todo el ancho disponible */
-  }
-  
-  #special{
-    bottom: -20; /* Lo coloca en la parte inferior de la ventana del navegador */
-    left: 0; /* Alinea el elemento a la izquierda */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el contenido horizontalmente */
-  }
- 
- header.others {
+    justify-content: center;
+    width: 100%;
+}
+
+#special {
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
     text-align: center;
-    margin-top: 30px; /* Puedes ajustar este valor según necesites */
+}
+
+header.others {
+    text-align: center;
+    margin-top: 30px;
     position: relative;
     height: 100px;
 }
 
 @media screen and (max-width: 1100px) {
+    .expansion{
+        width: calc(33.33% - 1em);
+    }
+
     .continet-list {
         margin-bottom: 340px;
     }
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 823px) {
+    .continet-list {
+        margin-bottom: 750px;
+    }
+}
+
+@media screen and (max-width: 720px) {
     .index {
         padding: 50px;
-        flex-direction: row; /* Asegura que las imágenes estén en filas */
+        flex-direction: row;
         justify-content: space-around;
-        flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea */
+        flex-wrap: wrap;
     }
-    .img-index { /* Usando el clip path, se le da la forma redondeada a las opciones del menú */
+    .expansion{
+        width: calc(33.33% - 1em);
+    }
+
+    .img-index {
         width: 10rem;
         margin: auto;
         clip-path: circle(50%);
-        margin: 0;
     }
+
     .opcion-menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-basis: calc(50% - 1rem); /* Cada imagen ocupará el 50% del ancho menos el margen */
-        margin-bottom: 1rem; /* Espaciado entre las filas */
+        flex-basis: calc(50% - 1rem);
+        margin-bottom: 1rem;
     }
+
     .enlace-index {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .content-wrapper {
-        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos en la columna */
+        flex-direction: column;
+        align-items: center;
     }
+
     .roadmap {
-        margin-right: 0; /* Reinicia el margen en pantallas pequeñas */
-        margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el video en pantallas pequeñas */
+        margin-right: 0;
+        margin-bottom: 20px;
     }
-    .video-wrapper{
-        width: 100%; 
-        max-width: 600px; 
-        margin: 0 auto; 
+
+    .video-wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .image-container {
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .continet-list {
-        margin-bottom: 400%;
+        margin-bottom: 110%;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .continet-list {
+        margin-bottom: 130%;
     }
 }
 
@@ -333,43 +408,53 @@ footer {
         padding: 50px;
         flex-direction: column;
     }
+
     .img-index { 
         width: 10rem;
         margin: auto;
         clip-path: circle(50%);
-        margin: 0;
     }
+
     .opcion-menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .enlace-index {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .roadmap{
+
+    .roadmap {
         height: 220px;
         width: 900px !important;
     }
-    .normalimage{
+
+    .normalimage {
         height: 220px;
         width: 900px !important;
     }
-    .video-wrapper{
-        width: 100%; 
-        margin: 0 auto; 
+
+    .video-wrapper {
+        width: 100%;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .image-container {
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .continet-list {
-        margin-bottom: 430%;
+        margin-bottom: 550%;
+    }
+    .expansion{
+        width: 70%;
     }
 }
 
@@ -381,6 +466,7 @@ footer {
         transform: scale(0.85) inherit;
     }
 }
+
 @keyframes rotar { 
     0% {
         transform: rotate(0deg) scale(1);
@@ -396,54 +482,79 @@ footer {
     }
 }
 
- /*Targets de todo*/
-#kalimdor{
-    background-image: url(img/WorldMap-Kalimdor.webp);
-  }
-  #reinos{
-    background-image: url(img/869563.jpg);
-  }
-  #khazalgar{
-    background-image: url(img/khaz.webp);
-  }
-  #terrallende{
-    background-image: url(img/WorldMap-Expansion01.webp);
-  }
-  #rasganorte{
-    background-image: url(img/rasga.jpeg);
-  }
-  #pandaria{
-    background-image: url(img/Pandaria.webp);
-  }
-  #draenor{
-    background-image: url(img/Draenor_WoD.webp);
-  }
-  #kultiras{
-    background-image: url(img/WorldMap-KulTirasES.webp);
-  }
-  #zandalar{
-    background-image: url(img/WorldMap-Zandalar.webp);
-  }
-  #abruptas{
-    background-image: url(img/WorldMap-BrokenIsles.webp);
-  }
-  #shadowlands{
-    background-image: url(img/TheShadowlands.jpg);
-  }
-  #dragon{
-    background-image: url(img/dragon.jpeg);
-  }
-  
-::-webkit-scrollbar-track {
-    background: #3d3535; /* Color de fondo del riel */
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #6d1c1c; /* Color del pulgar al hacer hover */
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(148, 98, 23); /* Color del pulgar */
-}
 /* Estilos para la barra de desplazamiento */
 ::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3d3535;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(148, 98, 23);
+}
+
+/* Targets de todo */
+#kalimdor {
+    background-image: url(img/WorldMap-Kalimdor.webp);
+}
+
+#reinos {
+    background-image: url(img/869563.jpg);
+}
+
+#khazalgar {
+    background-image: url(img/khaz.webp);
+}
+
+#terrallende {
+    background-image: url(img/WorldMap-Expansion01.webp);
+}
+
+#rasganorte {
+    background-image: url(img/rasga.jpeg);
+}
+
+#pandaria {
+    background-image: url(img/Pandaria.webp);
+}
+
+#draenor {
+    background-image: url(img/Draenor_WoD.webp);
+}
+
+#kultiras {
+    background-image: url(img/WorldMap-KulTirasES.webp);
+}
+
+#zandalar {
+    background-image: url(img/WorldMap-Zandalar.webp);
+}
+
+#abruptas {
+    background-image: url(img/WorldMap-BrokenIsles.webp);
+}
+
+#shadowlands {
+    background-image: url(img/TheShadowlands.jpg);
+}
+
+#dragon {
+    background-image: url(img/dragon.jpeg);
+}
+
+#classic{
+    background-image: url(img/classicjpg.avif)
+}
+#tbc{
+    background-image: url(img/burning-crusade-classic-2322203.jpg.webp);
+}
+
+#wotlk{
+    background-image: url(img/wotlk.jpeg);
 }
