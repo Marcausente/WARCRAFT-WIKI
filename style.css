@@ -219,7 +219,7 @@ footer {
     gap: 2em;
     width: 100%;
     max-width: 1300px;
-    margin-bottom: 175px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -557,4 +557,28 @@ header.others {
 
 #wotlk{
     background-image: url(img/wotlk.jpeg);
+}
+#cata{
+    background-image: url(img/WOW_Cata_Prepurchase_pve_stat_enus_Product_Asset_KEY_ART_1920x1080.png.avif);
+}
+#mop{
+    background-image: url(img/mop.webp);
+}
+#wod{
+    background-image: url(img/wod.webp);
+}
+#legion{
+    background-image: url(img/legion.webp);
+}
+#bfa{
+    background-image: url(img/bfa.jpeg);
+}
+#shadow{
+    background-image: url(img/shadow.webp);
+}
+#dragonflight{
+    background-image: url(img/dragonflight.jpeg);
+}
+#tww{
+    background-image: url(img/tww.avif);
 }
